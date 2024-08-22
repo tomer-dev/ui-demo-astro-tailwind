@@ -7,6 +7,7 @@ export default {
         "accent-light": "#4D9DE8",
         "accent-dark": "#021E2F",
         "custom-black": "#333333",
+        "custom-black-2": "#292929",
       },
       backgroundColor: {
         "gray-button": "#69727d",
@@ -14,6 +15,9 @@ export default {
       },
       borderColor: {
         "gray-input": "#69727d",
+      },
+      outlineColor: {
+        "dashed-button": "#FBC438",
       },
     },
     fontFamily: {

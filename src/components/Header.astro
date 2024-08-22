@@ -6,132 +6,99 @@ import menuIcon from "../assets/nav-menu-icon.svg";
 ---
 
 <nav class="bg-custom-black">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="relative flex h-12 items-center justify-between">
-      <Image
-        class="self-center sm:justify-start"
-        src={civiLogoWhite}
-        alt="menu-icon"
-        width="54"
-      />
-      <div class="hidden sm:flex flex-wrap justify-center mx-auto">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <ul class="inline-flex items-center justify-evenly">
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >ראשי</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >אודות</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >יכולות</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >המלצות</a
-            >
-          </li>
-        </ul>
-        <ul class="inline-flex items-center justify-evenly">
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >Academy</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              >בלוג</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
-              aria-current="page">צור קשר</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div class="items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button
-          type="button"
-          class="relative inline-flex items-center justify-center p-2 mx-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg
-            class="block h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg
-            class="hidden h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
+  <div
+    class="flex h-12 items-center justify between mx-auto max-w-7xl px-6 lg:px-8"
+  >
+    <div class="items-center sm:hidden flex-1">
+      <!-- Mobile menu button-->
+      <button
+        type="button"
+        class="transition duration-300 relative inline-flex items-center justify-center p-2 mx-2 hover:rotate-[4deg]"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <Image
+          src={menuIcon}
+          class="min-w-6 mt-0.5"
+          width="25"
+          alt="navigation bar "
+        />
+      </button>
     </div>
+    <Image
+      class="self-center sm:justify-start"
+      src={civiLogoWhite}
+      alt="menu-icon"
+      width="54"
+    />
+    <div class="hidden sm:flex flex-wrap justify-center mx-auto">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <ul class="inline-flex items-center justify-evenly">
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >ראשי</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >אודות</a
+          >
+        </li>
 
-    <!-- <nav class="bg-custom-black px-4 py-2 min-h-12 flex content-center">
-  <Image class="" src={menuIcon} alt="menu-icon" width="25" />
-
-  <ul class="flex flex-grow">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Posts</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-
-  <Image class="mr-auto" src={menuIcon} alt="menu-icon" width="25" />
-</nav> -->
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >יכולות</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >המלצות</a
+          >
+        </li>
+      </ul>
+      <ul class="inline-flex items-center justify-evenly">
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >Academy</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            >בלוג</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="p-2 mx-2 text-[19px] font-medium text-white transition hover:duration-[400] hover:text-accent-light"
+            aria-current="page">צור קשר</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="flex justify-center ms-1">
+      <button
+        class="transition duration-300 text-custom-black-2 px-[11px] py-1 font-semibold text-[16px] bg-white me-2 whitespace-nowrap hover:bg-accent-light hover:text-white"
+        ><span>תיאום הדגמה</span>
+      </button>
+      <button
+        class="transition duration-300 text-white px-[8px] py-0.5 font-semibold text-[16px] whitespace-nowrap hover:bg-accent-light border border-white"
+        ><span class="outline-dashed outline-dashed-button outline-1">
+          קבלת הצעת מחיר
+        </span>
+      </button>
+    </div>
   </div>
 </nav>
