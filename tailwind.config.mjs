@@ -12,6 +12,7 @@ export default {
       backgroundColor: {
         "gray-button": "#69727d",
         "custom-black": "#021E2F",
+        "rosy-button": "#c36",
       },
       borderColor: {
         "gray-input": "#69727d",
