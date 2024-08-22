@@ -6,6 +6,7 @@ import contactUsIllustration from "../assets/contact-us-illustration.svg";
 import Layout from "../layouts/Layout.astro";
 
 import ContactUsInputGroup from "../components/contact-us-input-group.astro";
+import Modal from "../components/Modal.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -28,6 +29,7 @@ import ContactUsInputGroup from "../components/contact-us-input-group.astro";
           class="bg-gray-button mt-2 py-2 px-8 rounded text-white text-[15px] transition duration-300 hover:bg-rosy-button"
           >שליחה</button
         >
+        <Modal />
       </div>
       <div class="w-full sm:w-1/2 self-end">
         <Image

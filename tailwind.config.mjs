@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "hover-light": "#9FD7FF",
         "accent-light": "#4D9DE8",
         "accent-dark": "#021E2F",
         "custom-black": "#333333",
