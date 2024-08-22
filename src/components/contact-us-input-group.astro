@@ -1,0 +1,51 @@
+---
+
+---
+
+<div class="flex flex-wrap">
+  <input
+    type="text"
+    id="form-field-name"
+    name="form_fields[name]"
+    placeholder="שם מלא"
+    class="w-full sm:w-1/2 border border-solid border-gray-input rounded-[3px] placeholder:text-[15px] py-2 ps-4 leading-[22px] placeholder-gray-500 placeholder-opacity-90"
+  />
+
+  <input
+    type="text"
+    id="form-field-company"
+    name="form_fields[company]"
+    placeholder="שם החברה"
+    required
+    class="w-full sm:w-1/2 border border-solid border-gray-input rounded-[3px] py-2 ps-4 placeholder:text-[15px] leading-[22px] placeholder-gray-500 placeholder-opacity-90"
+  />
+
+  <input
+    type="tel"
+    id="form-field-phone"
+    name="form_fields[phone]"
+    placeholder="טלפון"
+    title="מותר להשתמש רק במספרים ותווי טלפון (#, -, *, וכו')."
+    pattern="[0-9()#&+*-=.]+"
+    required
+    class="w-full sm:w-1/2 border border-solid border-gray-input rounded-[3px] py-2 ps-4 placeholder:text-[15px] leading-[22px] placeholder-gray-500 placeholder-opacity-90"
+    dir="rtl"
+  />
+
+  <input
+    type="email"
+    id="form-field-email"
+    name="form_fields[email]"
+    placeholder="אימייל"
+    required
+    class="w-full sm:w-1/2 border border-solid border-gray-input rounded-[3px] py-2 ps-4 placeholder:text-[15px] leading-[22px] placeholder-gray-500 placeholder-opacity-90"
+  />
+
+  <textarea
+    id="form-field-message"
+    name="form_fields[message]"
+    rows="4"
+    placeholder="תוכן ההודעה"
+    class="w-full border border-solid border-gray-input rounded-[3px] pt-[5px] ps-4 placeholder:text-[15px] leading-[22px] resize-none placeholder-gray-500 placeholder-opacity-90"
+  ></textarea>
+</div>
