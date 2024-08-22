@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+
+import closeModal from "../assets/close-modal.svg";
+---
+
+<a href="#navigation-bar-modal">as</a>
+
+<div
+  class="relative z-10 hidden target:block"
+  id="navigation-bar-modal"
+  aria-labelledby="modal-title"
+  role="dialog"
+  aria-modal="true"
+>
+  <a class="fixed inset-0 bg-black bg-opacity-80 transition-opacity" href="#">
+  </a>
+
+  <div
+    class="fixed inset-0 z-10 overflow-y-auto text-center items-start transform overflow-hidden bg-accent-dark w-[315px] p-2 h-[60vh]"
+  >
+    <a href="" class="float-end"
+      ><Image src={closeModal} width="40" alt="close-modal" /></a
+    >
+    <div
+      class="text-white text-lg mt-11 pt-2 ml-4 hover:[&>a]:text-hover-light [&>a]:block"
+    >
+      <a href="#" class="p-4">ראשי</a>
+      <a href="#" class="p-3">אודות</a>
+      <a href="#" class="p-3">יכולות</a>
+      <a href="#" class="p-4">המלצות</a>
+      <a href="#" class="p-3">Academy</a>
+      <a href="#" class="p-3">בלוג</a>
+      <a href="#" class="p-4">צור קשר</a>
+    </div>
+  </div>
+</div>
