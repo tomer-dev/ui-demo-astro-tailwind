@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+
+import menuIcon from "../assets/nav-menu-icon.svg";
+
+const { labelFor } = Astro.props;
+---
+
+<label for={labelFor} class="cursor-pointer">
+  <Image
+    src={menuIcon}
+    class="min-w-6 flex hover:rotate-[4deg] transition duration-300"
+    aria-controls="mobile-menu"
+    width="24"
+    alt="navigation bar "
+    draggable="false"
+  />
+</label>
