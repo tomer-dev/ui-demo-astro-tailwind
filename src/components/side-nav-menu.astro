@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+import closeModal from "../assets/close-modal.svg";
+
+import SideNavButton from "./side-nav-button.astro";
+---
+
+<!-- Hidden checkbox to control the dialog -->
+<input type="checkbox" id="dialog-toggle" class="hidden peer" />
+<!-- Open dialog button, that toggles checkbox -->
+<SideNavButton labelFor="dialog-toggle" />
+
+<label
+  for="dialog-toggle"
+  class="fixed inset-0 collapse peer-checked:visible cursor-pointer bg-black bg-opacity-80 ease-in-out duration-1000"
+></label>
+
+<dialog
+  class="fixed block z-10 collapse peer-checked:visible ease-in-out duration-1000"
+  id="navigation-bar-modal"
+  aria-labelledby="modal-title"
+  aria-modal="true"
+>
+  <div
+    class="fixed inset-0 z-10 overflow-y-auto text-center items-start overflow-hidden bg-accent-dark w-[315px] p-2 h-[60vh]"
+  >
+    <label for="dialog-toggle" class="cursor-pointer float-end">
+      <Image src={closeModal} width="40" alt="close-modal" />
+    </label>
+    <div
+      class="text-white text-lg mt-11 pt-2 ml-4 hover:[&>a]:text-hover-light [&>a]:block"
+    >
+      <a href="#" class="p-4">ראשי</a>
+      <a href="#" class="p-3">אודות</a>
+      <a href="#" class="p-3">יכולות</a>
+      <a href="#" class="p-4">המלצות</a>
+      <a href="#" class="p-3">Academy</a>
+      <a href="#" class="p-3">בלוג</a>
+      <a href="#" class="p-4">צור קשר</a>
+    </div>
+  </div>
+</dialog>
+
+<style></style>
