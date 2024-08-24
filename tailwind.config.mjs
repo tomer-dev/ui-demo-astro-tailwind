@@ -1,3 +1,5 @@
+const navigationHeader = "3rem";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -20,6 +22,12 @@ export default {
       },
       outlineColor: {
         "dashed-button": "#FBC438",
+      },
+      height: {
+        header: navigationHeader,
+      },
+      margin: {
+        header: navigationHeader,
       },
     },
     fontFamily: {

@@ -6,10 +6,8 @@ import civiLogoWhite from "../assets/civi-logo-white.png";
 import SideNavigationMenu from "./side-nav-menu.astro";
 ---
 
-<nav class="bg-custom-black min-h-12 select-none">
-  <div
-    class="flex h-12 items-center justify between mx-auto max-w-7xl px-6 lg:px-8"
-  >
+<nav class="fixed flex h-header w-full bg-custom-black select-none">
+  <div class="flex flex-1 items-center mx-auto max-w-7xl px-6 lg:px-8">
     <div class="md:hidden justify-center">
       <!-- Mobile menu button-->
       <SideNavigationMenu />

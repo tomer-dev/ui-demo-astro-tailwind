@@ -7,3 +7,5 @@ Differences were made in the navigation bar to make a more responsive design acr
 The project is made using Astro and Tailwind, and deployed without a single JS command.
 
 The project is completely static - just HTML and CSS. Note the side bar menu as a reference.
+
+Note: compare to desktop version, contents in mobile are different.
