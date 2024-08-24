@@ -13,22 +13,22 @@ import SideNavButton from "./side-nav-button.astro";
 
 <!-- Transparent overlay to prevent interaction while collapsing (backdrop overlay) -->
 <div
-  class="fixed inset-0 h-lvh collapse peer-checked:visible bg-transparent pointer-events-auto delay-300 peer-checked:delay-0"
+  class="absolute inset-0 h-lvh collapse peer-checked:visible bg-transparent pointer-events-auto delay-300 peer-checked:delay-0"
 >
 </div>
 <!-- Dialog backdrop -->
 <label
   for="dialog-toggle"
-  class="fixed inset-0 h-lvh collapse peer-checked:visible bg-black bg-opacity-80 cursor-pointer pointer-events-none peer-checked:pointer-events-auto delay-300 peer-checked:delay-0"
+  class="absolute inset-0 h-lvh collapse peer-checked:visible bg-black bg-opacity-80 cursor-pointer pointer-events-none peer-checked:pointer-events-auto delay-300 peer-checked:delay-0"
 ></label>
 
 <dialog
-  dir="ltr"
-  class="fixed block z-10 w-[315px] h-[60vh] mr-0 collapse peer-checked:visible transform transition-[right, pointer-events-none] -right-full peer-checked:right-0 duration-300"
+  class="fixed block max-w-side-nav w-auto min-w-28 h-full max-h-[60vh] min-h-40 mr-0 bg-transparent collapse peer-checked:visible transform transition-[right, pointer-events-none] -right-full peer-checked:right-0 duration-300"
   aria-labelledby="side-navigation-menu"
 >
   <div
-    class="fixed inset-0 z-10 overflow-y-auto text-center items-start overflow-hidden bg-accent-dark"
+    dir="ltr"
+    class="inset-0 h-auto text-center items-start bg-accent-dark overflow-auto"
   >
     <label for="dialog-toggle" class="cursor-pointer float-start">
       <Image src={closeModal} draggable="false" width="40" alt="close-modal" />

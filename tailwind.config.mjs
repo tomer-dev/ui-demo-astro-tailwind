@@ -2,7 +2,7 @@ const navigationHeader = "3rem";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -16,6 +16,7 @@ export default {
         "gray-button": "#69727d",
         "custom-black": "#021E2F",
         "rosy-button": "#c36",
+        footer: "#DAECF8",
       },
       borderColor: {
         "gray-input": "#69727d",
@@ -26,14 +27,29 @@ export default {
       height: {
         header: navigationHeader,
       },
+      minHeight: {
+        "side-nav": "60vh",
+      },
+      maxWidth: {
+        "side-nav": "315px",
+      },
+
       margin: {
         header: navigationHeader,
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              margin: 0,
+            },
+          },
+        },
       },
     },
     fontFamily: {
       sans: ["Heebo"],
-      serif: [],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

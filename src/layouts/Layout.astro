@@ -1,8 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
-import civiLogoWhite from "../assets/civi-logo-white.png";
-
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -14,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html dir="rtl" lang="he">
+<html dir="rtl" lang="he" class="min-h-dvh">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -23,9 +19,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="text-custom-black antialiased">
-    <div class="fixed top-0"><Header /></div>
-    <div class="mt-header"><slot /></div>
+  <body class="flex flex-col text-custom-black antialiased min-h-dvh">
+    <Header />
+    <div class="mt-header flex-1"><slot /></div>
     <Footer />
   </body>
 </html>
