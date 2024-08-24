@@ -11,22 +11,27 @@ import SideNavButton from "./side-nav-button.astro";
 <!-- Open dialog button, that toggles checkbox -->
 <SideNavButton labelFor="dialog-toggle" />
 
+<!-- Transparent overlay to prevent interaction while collapsing -->
+<div
+  class="fixed inset-0 collapse peer-checked:visible bg-transparent pointer-events-auto delay-300 peer-checked:delay-0"
+>
+</div>
+<!-- Dialog backdrop -->
 <label
   for="dialog-toggle"
-  class="fixed inset-0 collapse peer-checked:visible cursor-pointer bg-black bg-opacity-80 ease-in-out duration-1000"
+  class="fixed inset-0 collapse peer-checked:visible bg-black bg-opacity-80 cursor-pointer pointer-events-none peer-checked:pointer-events-auto delay-300 peer-checked:delay-0"
 ></label>
 
 <dialog
-  class="fixed block z-10 collapse peer-checked:visible ease-in-out duration-1000"
-  id="navigation-bar-modal"
-  aria-labelledby="modal-title"
-  aria-modal="true"
+  dir="ltr"
+  class="fixed block z-10 w-[315px] h-[60vh] mr-0 collapse peer-checked:visible transform transition-[right, pointer-events-none] -right-full peer-checked:right-0 duration-300"
+  aria-labelledby="side-navigation-menu"
 >
   <div
-    class="fixed inset-0 z-10 overflow-y-auto text-center items-start overflow-hidden bg-accent-dark w-[315px] p-2 h-[60vh]"
+    class="fixed inset-0 z-10 overflow-y-auto text-center items-start overflow-hidden bg-accent-dark"
   >
-    <label for="dialog-toggle" class="cursor-pointer float-end">
-      <Image src={closeModal} width="40" alt="close-modal" />
+    <label for="dialog-toggle" class="cursor-pointer float-start">
+      <Image src={closeModal} draggable="false" width="40" alt="close-modal" />
     </label>
     <div
       class="text-white text-lg mt-11 pt-2 ml-4 hover:[&>a]:text-hover-light [&>a]:block"

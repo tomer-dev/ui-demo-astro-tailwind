@@ -6,7 +6,7 @@ import civiLogoWhite from "../assets/civi-logo-white.png";
 import SideNavigationMenu from "./side-nav-menu.astro";
 ---
 
-<nav class="bg-custom-black">
+<nav class="bg-custom-black min-h-12 select-none">
   <div
     class="flex h-12 items-center justify between mx-auto max-w-7xl px-6 lg:px-8"
   >
@@ -24,10 +24,10 @@ import SideNavigationMenu from "./side-nav-menu.astro";
         src={civiLogoWhite}
         alt="menu-icon"
         width="54"
+        draggable="false"
       />
     </a>
     <div class="hidden md:flex flex-wrap justify-center mx-auto">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       <ul class="inline-flex items-center justify-evenly">
         <li>
           <a
