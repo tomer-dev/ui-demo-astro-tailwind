@@ -1,6 +1,8 @@
 # ui-demo-astro-tailwind 🚀
 
-A simple demo page, strictly adhering to specs, given an existing web page.
+## ⚠️ Original page has changed, there's no reference for comparison
+
+A simple demo page for experimentation, strictly adhering to specs, given an existing web page.
 
 Differences were made in the navigation bar to make a more responsive design across devices.
 
